@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM IST LINKS | srmlinks.com</title>
+    <link rel="icon" href="Srm.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1223px)" href="phone.css">
+    
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body onload="initClock()">
+
+    <!-- chatbot -->
+    <div class="chat_icon">
+    <div class="chat_circle">
+        
+        <img src="Helpdesk.png" alt="">
+    
+        <!-- <p>Chat Bot</p> -->
+    </div>
+</div>
+    <div class="chatbot-box">
+
+        <div class="online">
+            <img src="Srm.png" alt="">
+            <div class="onlinechat">
+                <h2>SRM</h2>
+                <p>online</p>
+            </div>
+        </div>
+
+        <div id="chatList">
+            <ul>
+                <li class="admin-message">Welcome to Srm-Links</li>
+                <!--<li class="client-message">XYZ</li> -->
+            </ul>
+        </div>
+
+        <div class="message-box-wrap">
+        <div class="message-box">
+
+                <!-- <input type="text" name="">  -->
+            </div>
+            <button id="send"><i class="bi bi-send-fill"></i></button>
+        </div>
+        <div class="admin-client-message-wrap">
+        <input type="text" name="name" data-question="I'm srm bot and I'm here to assist you. Please, Tell me your name?">
+        <input type="text" name="email" data-question="What's your e-mail?"
+        data-name required>
+        <input type="text" name="phone" data-question="What's your Number?">
+        <!-- <select id="botStarterMessage" class="botText" name="Service" data-question="Which service Information you want " >
+        <option>Please Select</option>
+        <option>web</option>
+        <option>design</option>
+        <option>digital</option>
+        </select> -->
+
+        <select id="botStarterMessage" class="botText" name="Service" data-question="Which service Info you want?">
+            <option title="Please Select"> Select</option>
+            <option value="Door To Door Delivery?">Door To Door Delivery ?</option>
+            <option value="Courier?">Courior ?</option>
+            <option value="Shopping?">Shopping ?</option>
+        </select>
+        <div name="Service">
+            
+                <!--
+                    <div name="delivery">
+                <input type="text" name="delivery" data-question="Product Delivered in one Place to another place 
+                (work only in city). Time depends on your product you wan't to delivered.
+                ( charges depends upon a product, Rahiontheway charges notify you before start processing.).">
+                <div>
+                -->
+                <select  data-question="Product Delivered in one Place to another place 
+                (work only in city). Time depends on your product you wan't to delivered.
+                ( charges depends upon a product, Rahiontheway charges notify you before start processing.">
+                    <option title="Please Select"> Please Select</option>
+                    <option  value="Satisfied.">Satisfied</option>
+                    <option value="Not Satisfied.">Not Satisfied</option>
+                </select>
+                <div data-question="Thanks to Vist RaHiontheway, Please Confirm?">
+                    <button id="confirm">Yes</button>
+                    <button id="notconfirm">No</button>
+                </div>
+
+            <div name="Courier?">
+                <select name="Courier?" data-question="Place to another place 
+                (work only in city). Time depends on your product you wan't to delivered.
+                ( charges depends upon a product, Rahiontheway charges notify you before start processing.">
+                    <option title="Please Select"> Please Select</option>
+                    <option  value="Satisfied your Information.">Satisfied your Information.</option>
+                    <option value="Not Satisfied your Information">Not Satisfied your Information.</option>
+                </select>
+            </div>
+
+            <div data-question=" Thanks to Visit RaHi on the way, Please Confirm ?">
+                <button id="confirm">Yes</button>
+                <button id="notconfirm">No</button>
+            </div>
+
+            <div name="courier">
+                <input type="text" name="courier" data-question="Pack your orders, print the required labels, and hand it over 
+                to the delivery partner(charges depends upon a product, Rahiontheway charges notify you before start processing).">
+            </div>
+            <div data-question=" Thanks to Visit RaHi on the way, Please Confirm ?">
+                <button id="confirm">Yes</button>
+                <button id="notconfirm">No</button>
+            </div>
+            <div name="shoping">
+                <input type="text" name="shoping" data-question="Under Process. The Features Coming soon for you. Not Available now." >
+            </div>
+            <div data-question=" Thanks to Vist RaHiontheway, Please Confirm?">
+                <button id="confirm">Yes</button>
+                <button id="notconfirm">No</button>
+            </div>
+            </div>
+        <!-- <div data-question="Confirm ?">
+            <button id="confirm">Yes</button>
+            <button id="notconfirm">No</button>
+        </div> -->
+        </div>
+        <form id="submit_info_form">
+        <div class="submit_info"></div>
+        <input type="submit" value="send" id="submit" name="">
+        </form>
+    </div>
+    
+
+                <!-- New Navbar and Search starting here ravushankar-->
+    <nav class="navbar">
+        <div class="navbarcontent">
+        <div id="logo">
+            <img src="srm-logo main.png" alt="logo"> 
+        </div>
+        <ul class="menu-list">
+
+            <div class="icon cancel-btn">
+                <i class="bi bi-x-lg"></i>
+            </div>
+
+            <li class="item"><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li class="item"><a href="links.html"><i class="bi bi-link-45deg"></i> Links</a></li>
+            <li class="item"><a href="https://www.youtube.com/watch?v=EEGaid0WwTU"><i class="bi bi-pin-map-fill"></i></i> Campus Tour</a></li>
+            <li class="item"><a href="https://www.srmup.in/cpage.aspx?mpgid=3&pgidtrail=79"><i class="bi bi-mortarboard-fill"></i> Rankings</a></li>
+            <li class="item"><a href="https://www.srmup.in/cpage.aspx?mpgid=3&pgidtrail=38"><i class="bi bi-person-fill"></i></i> Anti Ragging</a></li>
+            <li class="item"><a href="query.html"><i class="bi bi-envelope-check"></i> Query </a></li>
+            <li class="item"><a href="https://www.srmup.in/aboutus.aspx?mpgid=2&pgidtrail=11"><i class="bi bi-info-circle"></i> About Us </a></li>
+        
+            <div class="rightNav">
+                <td>
+                    <input type ="text" name="search" class="search"  placeholder="search here">
+                    <td>
+                        <a href="#"><i class="bi bi-search"></i></a>
+                    </td>
+                    </td>
+            </div>
+            </ul> 
+    
+        <div class="icon menu-btn">
+            <i class="bi bi-list"></i>
+        </div>
+        </div>
+        </nav>
+                <!-- New Navbar and Search closeing here -->
+    
+                <!-- image slider left to right starting here-->
+
+            <br>
+            <br>
+            
+        <div class="slideing">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio1">
+                
+                <div class="slide first">
+                    <img src="slide1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="srms1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="slide4.jpg" alt="">
+                </div>
+                
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+            
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+
+                <!-- image slider left to right closing here -->
+
+                <!-- slider up to down starting here -->
+    
+    <div class="content">
+        <div class="title">
+            Let's Know About
+            <div class="slider">
+                
+                <div>SRM IST</div>
+                <div>CROWD</div>
+                <div>CLUBS</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        
+        <div data-text="Welcome To RaHi On The Way"
+        class="light-head">Welcome To SRM University</div>
+        <p style="--delay: .8s">SRMIST aspires to be one of the best private universities
+            in the world by the year 2025. <br>This could be achieve through a series of strategic moves,
+            precise action plans, and an unwavering commitment to <br>the pursuit of knowledge and excellence.<br>
+            SRMIST is a deemed to be university,established under section 3 of the<br> UGC Act 1956 and having 
+            main campus at Kattankulathur, , Ramapuram, Vadapalani at Chennai.<br>
+            The Delhi-NCR campus was established in the year 1997 and houses over 5,000 students, over 200 faculties,
+            and a plethora of visiting faculty from across industries.</p>
+            
+        <button type="button" class="web"><a href="https://www.srmup.in/">Click Now to know more</a></button>
+    </div>
+    </div>  
+                <!-- slider up to down closing here -->
+
+                <div class="scrolls">
+                <br>
+                <br>
+                
+                    <!-- <h1 class="center">SRM IST <i class="bi bi-pin-map-fill"></i></h1>
+                <br>
+                <p class="center"><b>Deemed To Be University</b></p> -->
+                <div id="logo">
+                    <p class="center"><img src ="srmcampus.png" alt="logo"> </p>
+                    <p class="center dell"><b>SRM Campuses Link & Materials</b></p> 
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="panda">
+                <marquee direction="left" scrollamount="20">
+                    <h1> <a href="https://www.srmist.edu.in/admission-india/">Srmjee</a> <b><a href="brochure-2023.pdf">FeeStructure</a></b>  <b><a href="syllabus.pdf">Syllabus</a></b>
+                        <b><a href="https://www.srmist.edu.in/">KTR.Main-Campus</a></b> <b><a href="https://www.srmup.in/">Delhi-Ncr.Campus</a></b> <b><a href="http://www1.srmist.edu.in/vadapalani/">Vadapalani(Chennai)-Campus</a></b> <b><a href="https://srmrmp.edu.in/">Ramapuram(Chennai)-Campus</a></b> <b><a href="https://ist.srmtrichy.edu.in/">Tiruchirappalli-Campus</a></b></h1> 
+                </marquee>
+                </div> 
+                <p><br\></p>
+                <p><br\></p>
+                <p><br\></p>
+                <p><br\></p>
+                <p><br\></p>
+            </div>
+
+                <!-- services Section statrting here -->
+
+                
+                    
+
+                <section class="services">
+        
+                    <h1 class="servicedad"> <b>SRM Links </b></h1>
+                    
+                    <p class="center"> <b class="m">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”🤵🏽</b></p>
+            <div id="services">
+        <div class="box">
+            <img src="fee.png" alt="">
+            <h1 class="h-secondary center"><b>SRM Feekart</b></h1><br>
+            <P class="center">SRMIST students can login with NetID credentials.. Time depends on your product you wan't to delivered.<b>( To log on to this online account <br>use Student Web Interface username and password as your login credentials)</b> </P>
+            <!-- <p class="join"><a href="https://feekart.srmist.edu.in/srmopp/">PAY</a></p> -->
+        </div>
+    <div class="box">
+            <img src="hostal.jpg" alt="">
+            <h2 class="h-secondary center"><b>Hostel Booking</b></h2><br>
+            <P class="center">To log on to this Online Hostel Booking System. SRMIST students can login with NetID credentials. (<b>"ONE ID , ONE DEVICE" - No one can login into multiple systems using same ID</b>)</P>
+            <!-- <p class="joins"><a href="https://hostellogin.srmist.edu.in/srmclb/">BOOK</a></p> -->
+        </div>
+    <div class="box">
+            <img src="club.png" alt="">
+            <h2 class="h-secondary center"><b>SRM CLUBS</b></h2><br>
+            <P class="center">SRM IST Delhi NCR campus believes in and actively promotes the hobbies and areas of interest of its students. <b> “SRM Cultural Club, <br>SRM Educational Societies” </b> </P>
+            <!-- <p class="joinss"><a href="https://www.srmup.in/cpage.aspx?mpgid=6&pgidtrail=44">JOIN</a></p>  -->
+        </div>
+        </div>
+    </section>
+                <!-- services Section closed  here -->
+
+                <!-- services Section statrting here -->
+
+                <section class="services">
+        
+                    <h1 class="servicedad"> <b>SRM E-Tools </b></h1>
+                    
+            <div id="services">
+        <div class="box">
+            <img src="lab.png" alt="">
+            <h1 class="h-secondary center"><b>E-Lab</b></h1><br>
+            <P class="center">SRMIST students can login with NetID credentials.. Time depends on your product you wan't to delivered.<b>( To log on to this online account <br>use Student Web Interface username and password as your login credentials)</b> </P>
+            <!-- <p class="join"><a href="https://care.srmup.in/#/elab">OPEN</a></p> -->
+        </div>
+    <div class="box">
+            <img src="library.png" alt="">
+            <h2 class="h-secondary center"><b>E-Library</b></h2><br>
+            <P class="center">To log on to this Online Hostel Booking System. SRMIST students can login with NetID credentials. (<b>"ONE ID , ONE DEVICE" - No one can login into multiple systems using same ID</b>)</P>
+            <!-- <p class="joins"><a href="https://www.srmup.in/library.aspx?mpgid=3&pgid1=84&pgidtrail=88">OPEN</a></p> -->
+        </div>
+    <div class="box">
+            <img src="result.jpg" alt="">
+            <h2 class="h-secondary center"><b>Semster Result</b></h2><br>
+            <P class="center">SRM IST Delhi NCR campus believes in and actively promotes the hobbies and areas of interest of its students. <b> “SRM Cultural Club, <br>SRM Educational Societies” </b> </P>
+            <!-- <p class="joinss"><a href="https://evarsity.srmist.edu.in/srmwebonline/exam/onlineResult.jsp">CHECK</a></p>  -->
+        </div>
+        </div>
+    </section>
+                <!-- services Section closed  here -->
+
+                
+                <!-- services Section statrting here -->
+
+                 <section class="services">
+        
+                    <!-- <h1 class="servicedad"> <b>SRM </b></h1> -->
+                    
+                    <!-- <p class="center"> <b class="m">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”🤵🏽</b></p> -->
+            <div id="services">
+        <div class="box">
+            <img src="Srm.png" alt="">
+            <h1 class="h-secondary center"><b>  Alumni Portal</b></h1><br>
+            <P class="center">The Official Alumni Network of SRM Institute of Science and Technology. Connect with classmates, post jobs, share memories and a lot more.
+                <br><b>( To login on user and password as your login credentials)</b> </P><br>
+            <!-- <p class="join"><a href="https://alumnisrm.com/">LOGIN</a></p> -->
+        </div>
+        <div class="box">
+            <img src="eresources.png" alt="">
+            <h2 class="h-secondary center"><b>E-Resources</b></h2><br>
+            <P class="center"> E-Databases· CDJ Law JOurnal· EBSCO· Lexis Advance. Lexis Advance- India · MEDLINE · Nano Nature · SCOPUS ..
+                (<b>Available content E-Books, E-Databases,<br>E-journals, Tutorials</b>)</P>
+<!--             
+            <p class="joinss"><a href="https://srmuniv.remotexs.in/database">OPEN</a></p>  -->
+        </div>
+    <div class="box">
+            <img src="E-learning.jpg" alt="">
+            <h2 class="h-secondary center"><b>E-Learning  </b></h2><br>
+            <P class="center">Welcome to SRM Online Learning Platform. Log in to view your courses, explore tools and features, and customize your eLearning experience.</P><br>
+            <!-- <p class="joinss"><a href="https://learn.srmonline.in/d2l/login">OPEN</a></p> -->
+        </div>
+        
+        </div>
+    </section>
+                <!-- services Section closed  here -->
+
+                 <!-- support Section starting here -->
+    
+    <section class="support">
+        <h1 class="servicedad"> <b>STUDENTS PORTAL </b></h1>
+        
+        <div id="support">
+           <div class="box">
+        <img src="erp.png" alt="">
+        <h2 class="h-secondary center">STUDENT ERP LOGIN </h2>
+               <P class="center"> You can access student portal to know your academic performance, time table, earned credits, financial details. <br>
+                <b>SRMIST students can login with NetID credentials.</b> </P>
+                <!-- <p class="order"><a href="https://evarsity.srmist.edu.in/srmsip/">LOGIN</a></p>  -->
+           </div>
+           <div class="box">
+            <img src="outing.jpg" alt="">
+            <h2 class="h-secondary center">HOSTEL OUTPASS/LEAVEPASS</h2>
+            <P class="center">SRM IST, NCR Campushas <b> hostels have a fully equipped gym and separate courts for Outdoor Games.</b> <br>
+                <!-- The hostels are equipped with all modern facilities. --></P>
+                <br>
+        
+            <div id="customer" class="form-text"><br><b>OUT PASS</b><br> Timing :- 12.00AM to 7.00PM <br><b>LEAVE PASS</b><br> Timing :- 7.00PM to 12.00AM </div>
+            <!-- <p class="csi"><a href="https://www.srmimthostel.net/olms">PASS APPLY</a></p>  -->
+        </div>
+        </div>
+    </section>
+               
+
+
+                 <!-- services Section statrting here -->
+
+                  <section class="services">
+        
+                    <h1 class="servicedad"> <b>SRM RAGGING FREE CAMPUS </b></h1>
+                    
+            <div id="anti">
+        <div class="box">
+            <img src="ragg1.jpg" alt="">
+            <!-- <h1 class="h-secondary center"><b>SE</b></h1><br> -->
+             
+        </div>
+    <div class="box">
+            <img src="ragg2.jpg" alt="">
+            <!-- <h1 class="h-secondary center"><b>SE</b></h1><br> -->
+            
+        </div>
+    <div class="box">
+            <img src="ragg3.webp" alt="">
+            <!-- <h2 class="h-secondary center"><b>Semster Result</b></h2><br> -->
+             
+         </div>
+         <div class="box">
+            <img src="rag4.jpg" alt="">
+            <!-- <h2 class="h-secondary center"><b>Semster Result</b></h2><br> -->
+             
+         </div>
+        
+        </div>
+    </section>
+                <!-- services Section closed  here -->
+
+                 <!-- services Section statrting here -->
+
+                 <section class="services">
+        
+                    <h1 class="servicedad"> <b>SRM GREEN CAMPUS </b></h1>
+                    
+            <div id="anti">
+        <div class="box">
+            <img src="green2.jpg" alt="">
+            <!-- <h1 class="h-secondary center"><b>SE</b></h1><br> -->
+             
+        </div>
+    <div class="box">
+            <img src="green 1.jpg" alt="">
+            <!-- <h1 class="h-secondary center"><b>SE</b></h1><br> -->
+            
+        </div>
+    <div class="box">
+            <img src="green3.png" alt="">
+            <!-- <h2 class="h-secondary center"><b>Semster Result</b></h2><br> -->
+             
+         </div>
+         <div class="box">
+            <img src="green4.jpg" alt=""> 
+            <!-- <h2 class="h-secondary center"><b>Semster Result</b></h2><br> -->
+             
+         </div>
+        
+        </div>
+    </section>
+                <!-- services Section closed  here -->
+
+
+
+
+
+            <!-- <div class="scrolls">
+                <br>
+                <br>
+                <h1 class="center">RaHi on The Way in Your City <i class="bi bi-pin-map-fill"></i></h1>
+                <br>
+                <p class="center"><b>( We are coming soon is your City Shortly. )</b></p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="panda">
+                <marquee direction="left" scrollamount="20">
+                    <h1><b>PATNA</b>  <b>HAJIPUR</b> <b>CHENNAI</b> <b>GHAZIABAD</b></h1> 
+                </marquee>
+                </div> 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div> -->
+                <!-- right to left movement  scrolls closing here -->
+            <!-- 
+            <div class="scrolling">
+                <h1><b>PATNA</b>  <b>HAJIPUR</b></h1>
+            </div>
+            -->
+            
+            <!-- client section starting here -->
+    <section id="client-section">
+        <h1 class="h-primary center">TECHNICAL CLUBS</h1>
+        <div id="clients">
+            <div class="client-item">
+                <a href="https://csiindia.org/"><img src="tc1.jpg" alt="CSI"></a>
+            </div>
+            <div class="client-item">
+                <a href="https://practice.geeksforgeeks.org/explore?page=1&curated[]=1&sortBy=submissions&curated_names[]=SDE%20Sheet"><img src="tc2.jpeg" alt="GEEKSFORGEEKS"></a>
+            </div>
+            <div class="client-item">
+                <a href="http://www.isteonline.in/"><img src="tc3.png" alt="ISTE"></a>
+            </div>
+            <div class="client-item">
+                <a href="https://developers.google.com/products/develop"><img src="tc4.webp" alt="GOOGLE"></a>
+            </div>
+    </section>
+            <!-- client section closing here -->
+            <div>
+                
+            </div>
+            <!-- support Section starting here
+    
+    <section class="support">
+        <h1 class="servicedad"> <b>RaHi On The Way </b></h1>
+        
+        <div id="support">
+           <div class="box">
+        <img src="Images/track.png" alt="">
+               <h2 class="h-secondary center">Smart Delivery Tracking </h2>
+               <P class="center"> The best way to find your Order Location. Keep track of your shipments 
+                 with quick  courier-tracking using your Delivery Code.Track your shipments or orders 
+                <br> using Rahiontheway Smart Track. Rahiontheway Courier Tracking for  your eCommerce orders. </P>
+           </div>
+           <div class="box">
+            <img src="Images/customer.png" alt="">
+            <h2 class="h-secondary center">Customer Care Support</h2>
+            <P class="center">Call us and we will answer all your questions about <b>Delivery, Courior & Shoping</b> on RaHiontheway.  Want to know more?
+                Let's contact, We're happy to help you.</P>
+                <br>
+            <div id="customer" class="form-text">Monday To Friday <br>(Except National Holidays) <br>Timing :- 10.00am to 5.00pm </div>
+        </div>
+        </div>
+    </section> -->
+    
+    <div class="comingsoon">
+        <div class="soon">
+            <p class="on">SRM-LINKS</p>
+            <p class="on">Website is Under Maintenace.</p>
+            <br>
+            <p class="head">TODAY'S QUOTES <i class="bi bi-pencil"></i></p>
+            <p class="quotes">Lost Time is never found again....<i class="bi bi-emoji-wink-fill"></i></p>
+            <!-- <p class="quotes">You Build Your Own Dreams, Otherwise<br>
+                Somebody Else Will Hire You To Build His Dreams....<i class="bi bi-emoji-wink-fill"></i></p> -->
+            <br>
+            <h1>We're <q>Launching</q> Soon</h1>
+            
+                <div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div> 
+            </div>
+        
+            <img src="Srm.png" class="rocket">
+        </div>
+        </div>
+        
+
+            
+    <div class="faq">
+    <div class="faqheading">
+        <h1 class="faqdoor"><b>SRM Delhi-Ncr Campus  Related FAQs </b></h1>
+        <br>
+            <form class="faq-box">
+        
+            <details > 
+                <summary class="faq-point">Srm delhi ncr provide degree which university? </summary>
+                <p class="faq-p">
+                    SRM Delhi ncr Provides the degree Main Campus SRM KTR.
+                </p>
+            </details>
+            <br>
+            <details > 
+                <summary class="faq-point"> SRM Delhi-Ncr Campus Located in? </summary>
+                <p class="faq-p">
+                    Delhi-NCR Campus, Delhi-Meerut Road, Modinagar, Ghaziabad-201204 (U.P.)
+                </p>
+            </details>
+            <br>
+            <details > 
+                <summary class="faq-point"> When Can I Visit the Campus? </summary>
+                <p class="faq-p">
+                    Students / Parents can visit the campus on any working day (Monday to Saturday) between 9 AM – 5 PM.
+                </p>
+            </details>
+            <br>
+            <details > 
+                <summary class="faq-point"> As Schlorship available for the university students? </summary>
+                <p class="faq-p">
+                    es. As per the scholarship details published in our main campus website www.srmist.edu.in
+                </p>
+            </details>
+            </form>
+        </div>
+    </div> 
+            <!-- Term and condition closing here  -->
+
+    <div id="address">
+        <h1 class="h-primary center">CONTACT US</h1>
+        <p class="center"><b>Mr. Ravi Shankar</b></p>
+        <p class="center"> <b>The RaHi Technologies.</b></p>
+    <div id="address-box">
+    <address>
+            <a href="Mailto:shankarravi382@gmail.com">📧Mail: shankarravi382@gmail.com</a><br>
+
+            <a href="9122596553">☎️Tel: 9122596553</a>
+        </address>
+    </div>
+
+</div>
+
+<section>
+            <div class="fb">
+            <a href="https://www.facebook.com/srmup/"><div class="gupta"><img src="fblogo.jpg" alt="Facebook"></r></a> 
+            <a href=""><r class="gupta"><img src="in.jpg" alt="Linked in"></r></a>
+            <a href=""><r class="gupta"><img src="insta.png" alt="Instagram"></r></a>
+            <a href="https://www.youtube.com/watch?v=EEGaid0WwTU"><r class="gupta"><img src="tube.jpg" alt="Youtube"></r></a>
+            
+            
+            </div>
+        </section>
+        <div>
+            <p class="center"> <b class="l">We Love SRMIST💜</b> </p>
+        </div>
+        <div>
+            <p class="center"> <b  class="l">The Website Design & Developed by Ravi Shankar</b> </p>
+        </div>
+        <div>
+            <p class="center"> <b  class="l"> B.TECH CSE RA2211003030320</b> </p>
+        </div>
+    <br>
+    <br>
+    <footer>
+        <div class="center">
+            www.srmup.com.&copy; The RaHi Technologies. 
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="resp.js"></script>
+</body>
+</html>
